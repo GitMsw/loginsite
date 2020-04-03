@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<h1> {{ request.session.user_name}}!欢迎回来 </h1>
+    <div class="container">
+            <div class="col">
+                <form class="form-register" action="/index/" method="post">
+                    {% csrf_token %}
+                    {% if message %}
+                    <div class="alert alert-warning">{{ message }}</div>
+                    {% endif %}
+                    <label for="id_email" ></label>
+                    <input type="text" id="id_email" name="email" placeholder="输入想要发送的内容" required>
+                    <p>
+                        <input type="submit" value="发送">
+                    </p>
+                </form>
+
+            </div>
+    </div>
+<p>
+    <a href="/logout/">登出</a>
+</p>
+</body>
+</html>
