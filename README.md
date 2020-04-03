@@ -14,18 +14,16 @@
 
 路由设置：
 
-<div class="highlight highlight-source-python">
-from django.contrib import admin
-from django.urls import path, include
-from login import views
+    from django.contrib import admin
+    from django.urls import path, include
+    from login import views
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('index/', views.index),
-    path('login/', views.login),
-    path('register/', views.register),
-    path('logout/', views.logout),
-    path('confirm/', views.user_confirm),
-    path('captcha/', include('captcha.urls'))   # 增加这一行
-]
-</div>
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('index/', views.index),
+        path('login/', views.login),
+        path('register/', views.register),
+        path('logout/', views.logout),
+        path('confirm/', views.user_confirm),
+        path('captcha/', include('captcha.urls'))   # 增加这一行
+    ]
