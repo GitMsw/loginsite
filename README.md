@@ -14,7 +14,7 @@
 
 路由设置：
 
-
+<div class="highlight highlight-source-python">
 from django.contrib import admin
 from django.urls import path, include
 from login import views
@@ -28,3 +28,4 @@ urlpatterns = [
     path('confirm/', views.user_confirm),
     path('captcha/', include('captcha.urls'))   # 增加这一行
 ]
+</div>
